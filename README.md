@@ -4,11 +4,15 @@
 
 M5 Petit用の汎用ユーティリティスクリプト集です。ファームウェア(.ino)もここに置きます(準備中)。
 
-M5Stack CoreS3用ファームウェアは[`m5_core_s3_script/`](./m5_core_s3_script/)に置く予定です。セットアップ手順は[HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md)を参照してください。
-
 いずれのスクリプトも`$PETIT_DATA_DIR`(デフォルト`~/petit_data`)配下のデータを扱い、[m5-petit-app](https://github.com/PetitOnes/m5-petit-app)と同じディレクトリ構成(`characters/<character_id>/chat_histories/`、`characters/<character_id>/stream_logs/`など)を読み書きします。
 
 ## スクリプト一覧
+
+### `m5_core_s3_script/` — ファームウェア
+
+M5Stack CoreS3用ファームウェア(.ino)を置く場所です。🚧 現在準備中(まだファイルは入っていません)。
+
+セットアップ手順は[HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md)を参照してください(PlatformIOでのビルド・書き込み手順)。
 
 ### `mailbox/` — メールボックス
 
