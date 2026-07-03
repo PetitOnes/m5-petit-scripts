@@ -30,9 +30,24 @@ m5-petit-appのHTTP API経由ではなく、ターミナル等から直接Claude
 
 - `register_tts_voices.py --chars <id...> --tts-url <url> --asr-url <url>` — キャラのTTS音声を生成して話者認識(ASR)に登録
 
+### ノート
+
+- `write_notebook.py <author> <content>` / `--file <path>` — 交換ノート(「ノート」タブ用)にエントリを追記
+
+### ターミナルチャット
+
+tmux上でClaudeと直接対話するセッションを管理するためのスクリプトです(m5-petit-appのHTTP APIとは別の入口)。
+
+- `start_chat_session.sh <char_id> <system_prompt_file>` — セッションIDを引き継いでClaudeを起動(日次リセットつき)。system_prompt_fileは自分で用意してください
+- `tmux_chat_capture.py --char-id <id>` — `tmux pipe-pane`の出力からClaudeの返答を抽出してchat_history.jsonに保存
+- `record_session.py` — セッション終了時刻を記録(Claude CodeのStopフックから呼ぶ想定)
+
 ## 環境変数
 
 | 変数名 | 説明 | デフォルト |
 | --- | --- | --- |
 | `PETIT_DATA_DIR` | データディレクトリ(m5-petit-appと共有) | `~/petit_data` |
+| `USER_ID` | ノートの保存先を決めるユーザーID(`write_notebook.py`用) | `user` |
 | `TTS_URL` / `ASR_URL` | TTS/ASRサーバーのURL(`register_tts_voices.py`用) | — |
+| `PETIT_CHARACTER_ID` / `PETIT_SESSION_USER` | `record_session.py`用 | `petit` / — |
+| `PROJECT_DIR` | `start_chat_session.sh`がClaude Codeのセッション保存先を特定するのに使う | カレントディレクトリ |
