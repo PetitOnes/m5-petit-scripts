@@ -8,12 +8,12 @@ M5 Petit用の汎用ユーティリティスクリプト集です。ファーム
 
 ## スクリプト一覧
 
-### メールボックス
+### `mailbox/` — メールボックス
 
 - `mark_mail_read.py <character_id> <filename...>` / `--all` — メールを既読にする
 - `list_unread_mail.py <character_id>` — 未読メール一覧を表示
 
-### チャットログ・記録
+### `chat_log/` — チャットログ・記録
 
 m5-petit-appのHTTP API経由ではなく、ターミナル等から直接Claudeを呼ぶ場合にログを共有するためのスクリプトです。
 
@@ -22,19 +22,19 @@ m5-petit-appのHTTP API経由ではなく、ターミナル等から直接Claude
 - `read_stream.py <file or character_id>` — stream-jsonログを色付きで読みやすく表示
 - `format_stream_log.py [file]` — stream-jsonをパイプで受けてプレーンテキストログに変換
 
-### コスト集計
+### `cost/` — コスト集計
 
 - `generate_cost_summary.py [--budget USD] [--reset-day N]` — `characters/*/stream_logs/`からコストを集計し、Markdownサマリーを書き出す
 
-### 音声
+### `voice/` — 音声
 
 - `register_tts_voices.py --chars <id...> --tts-url <url> --asr-url <url>` — キャラのTTS音声を生成して話者認識(ASR)に登録
 
-### ノート
+### `notebook/` — ノート
 
 - `write_notebook.py <author> <content>` / `--file <path>` — 交換ノート(「ノート」タブ用)にエントリを追記
 
-### ターミナルチャット
+### `terminal_chat/` — ターミナルチャット
 
 tmux上でClaudeと直接対話するセッションを管理するためのスクリプトです(m5-petit-appのHTTP APIとは別の入口)。
 
