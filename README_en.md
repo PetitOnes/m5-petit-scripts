@@ -2,19 +2,23 @@
 
 ## [日本語ページ](./README.md)
 
-A collection of general-purpose utility scripts for M5 Petit. Firmware (`.ino`) also lives here (coming soon).
+Firmware and general-purpose utility scripts for M5 Petit.
 
 Every script operates on data under `$PETIT_DATA_DIR` (default `~/petit_data`), using the same directory layout as [m5-petit-app](https://github.com/PetitOnes/m5-petit-app) (`characters/<character_id>/chat_histories/`, `characters/<character_id>/stream_logs/`, etc.).
 
 ## Scripts
 
-### `m5_core_s3_script/` — firmware
+### `m5_core_s3_scripts/` — firmware
 
-Where the M5Stack CoreS3 firmware (`.ino`) lives. 🚧 Work in progress (no files yet).
+The M5Stack CoreS3 firmware (`m5_petit/m5_petit.ino`). WiFi and other settings are loaded from `config.txt` on the SD card (see `config.example.txt`). Face images and sound effects for the SD card are provided as `sd.zip` at the repo root.
 
-See [HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md) (Japanese) for the PlatformIO build/flash steps.
+See [HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md) (Japanese) for setup steps. You can flash either with the [M5 Petit Web Flasher](https://petitones.github.io/m5-petit-scripts/) (from your browser — recommended) or with the Arduino IDE.
 
-🎬 Watch how to install from your browser via the [Web Flasher](https://petitones.github.io/m5-petit-scripts/) → [install video](./videos/install_via_webpage.mp4)
+🎬 Watch how to install via the Web Flasher → [install video](./videos/install_via_webpage.mp4)
+
+### `web/` — Web Flasher page
+
+Source of the Web Flasher above ([petitones.github.io/m5-petit-scripts](https://petitones.github.io/m5-petit-scripts/)). Flashes CI-built firmware from the browser via [ESP Web Tools](https://esphome.github.io/esp-web-tools/).
 
 ### `mailbox/`
 
