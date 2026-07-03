@@ -30,9 +30,24 @@ For sharing logs when calling Claude directly (e.g. from a terminal) instead of 
 
 - `register_tts_voices.py --chars <id...> --tts-url <url> --asr-url <url>` — generate TTS voice samples for each character and register them for speaker recognition (ASR)
 
+### Notebook
+
+- `write_notebook.py <author> <content>` / `--file <path>` — append an entry to the exchange notebook (used by the "Notebook" tab)
+
+### Terminal chat
+
+Scripts for managing a session where you talk to Claude directly in tmux, separate from m5-petit-app's HTTP API.
+
+- `start_chat_session.sh <char_id> <system_prompt_file>` — launch Claude with session resume (with a daily reset). Bring your own system_prompt_file
+- `tmux_chat_capture.py --char-id <id>` — extract Claude's replies from `tmux pipe-pane` output and save them to chat_history.json
+- `record_session.py` — record when a session ended (meant to be called from a Claude Code Stop hook)
+
 ## Environment variables
 
 | Variable | Description | Default |
 | --- | --- | --- |
 | `PETIT_DATA_DIR` | Data directory (shared with m5-petit-app) | `~/petit_data` |
+| `USER_ID` | User ID that determines where notes are saved (for `write_notebook.py`) | `user` |
 | `TTS_URL` / `ASR_URL` | TTS/ASR server URLs (for `register_tts_voices.py`) | — |
+| `PETIT_CHARACTER_ID` / `PETIT_SESSION_USER` | For `record_session.py` | `petit` / — |
+| `PROJECT_DIR` | Used by `start_chat_session.sh` to locate Claude Code's session storage | current directory |
