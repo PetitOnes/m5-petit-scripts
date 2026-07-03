@@ -8,12 +8,12 @@ Every script operates on data under `$PETIT_DATA_DIR` (default `~/petit_data`), 
 
 ## Scripts
 
-### Mailbox
+### `mailbox/`
 
 - `mark_mail_read.py <character_id> <filename...>` / `--all` — mark mail as read
 - `list_unread_mail.py <character_id>` — list unread mail
 
-### Chat log / records
+### `chat_log/`
 
 For sharing logs when calling Claude directly (e.g. from a terminal) instead of through m5-petit-app's HTTP API.
 
@@ -22,19 +22,19 @@ For sharing logs when calling Claude directly (e.g. from a terminal) instead of 
 - `read_stream.py <file or character_id>` — pretty-print a stream-json log with colors
 - `format_stream_log.py [file]` — pipe stream-json in, get a plain-text log out
 
-### Cost tracking
+### `cost/`
 
 - `generate_cost_summary.py [--budget USD] [--reset-day N]` — aggregate cost from `characters/*/stream_logs/` and write a Markdown summary
 
-### Voice
+### `voice/`
 
 - `register_tts_voices.py --chars <id...> --tts-url <url> --asr-url <url>` — generate TTS voice samples for each character and register them for speaker recognition (ASR)
 
-### Notebook
+### `notebook/`
 
 - `write_notebook.py <author> <content>` / `--file <path>` — append an entry to the exchange notebook (used by the "Notebook" tab)
 
-### Terminal chat
+### `terminal_chat/`
 
 Scripts for managing a session where you talk to Claude directly in tmux, separate from m5-petit-app's HTTP API.
 
