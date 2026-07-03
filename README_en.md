@@ -14,6 +14,8 @@ Where the M5Stack CoreS3 firmware (`.ino`) lives. 🚧 Work in progress (no file
 
 See [HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md) (Japanese) for the PlatformIO build/flash steps.
 
+🎬 Watch how to install from your browser via the [Web Flasher](https://petitones.github.io/m5-petit-scripts/) → [install video](./videos/install_via_webpage.mp4)
+
 ### `mailbox/`
 
 - `mark_mail_read.py <character_id> <filename...>` / `--all` — mark mail as read
