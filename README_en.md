@@ -4,6 +4,8 @@
 
 A collection of general-purpose utility scripts for M5 Petit. Firmware (`.ino`) also lives here (coming soon).
 
+M5Stack CoreS3 firmware will live in [`m5_core_s3_script/`](./m5_core_s3_script/). See [HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md) (Japanese) for setup steps.
+
 Every script operates on data under `$PETIT_DATA_DIR` (default `~/petit_data`), using the same directory layout as [m5-petit-app](https://github.com/PetitOnes/m5-petit-app) (`characters/<character_id>/chat_histories/`, `characters/<character_id>/stream_logs/`, etc.).
 
 ## Scripts
