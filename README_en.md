@@ -2,23 +2,13 @@
 
 ## [日本語ページ](./README.md)
 
-Firmware and general-purpose utility scripts for M5 Petit.
+General-purpose utility scripts for M5 Petit.
+
+The firmware (for M5Stack CoreS3), the Web Flasher, and the setup guide have moved to [m5-petit-firmware](https://github.com/PetitOnes/m5-petit-firmware).
 
 Every script operates on data under `$PETIT_DATA_DIR` (default `~/petit_data`), using the same directory layout as [m5-petit-app](https://github.com/PetitOnes/m5-petit-app) (`characters/<character_id>/chat_histories/`, `characters/<character_id>/stream_logs/`, etc.).
 
 ## Scripts
-
-### `m5_core_s3_scripts/` — firmware
-
-The M5Stack CoreS3 firmware (`m5_petit/m5_petit.ino`). WiFi and other settings are loaded from `config.txt` on the SD card (see `config.example.txt`). Face images and sound effects for the SD card are provided as `sd.zip` at the repo root.
-
-See [HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md) (Japanese) for setup steps. You can flash either with the [M5 Petit Web Flasher](https://petitones.github.io/m5-petit-scripts/) (from your browser — recommended) or with the Arduino IDE.
-
-🎬 Watch how to install via the Web Flasher → [install video](./videos/install_via_webpage.mp4)
-
-### `web/` — Web Flasher page
-
-Source of the Web Flasher above ([petitones.github.io/m5-petit-scripts](https://petitones.github.io/m5-petit-scripts/)). Flashes CI-built firmware from the browser via [ESP Web Tools](https://esphome.github.io/esp-web-tools/).
 
 ### `mailbox/`
 

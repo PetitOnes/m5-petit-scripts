@@ -2,23 +2,13 @@
 
 ## [EnglishPage](./README_en.md)
 
-M5 Petit用のファームウェアと汎用ユーティリティスクリプト集です。
+M5 Petit用の汎用ユーティリティスクリプト集です。
+
+ファームウェア(M5Stack CoreS3用)・Web Flasher・セットアップ手順は[m5-petit-firmware](https://github.com/PetitOnes/m5-petit-firmware)に移動しました。
 
 いずれのスクリプトも`$PETIT_DATA_DIR`(デフォルト`~/petit_data`)配下のデータを扱い、[m5-petit-app](https://github.com/PetitOnes/m5-petit-app)と同じディレクトリ構成(`characters/<character_id>/chat_histories/`、`characters/<character_id>/stream_logs/`など)を読み書きします。
 
 ## スクリプト一覧
-
-### `m5_core_s3_scripts/` — ファームウェア
-
-M5Stack CoreS3用ファームウェア(`m5_petit/m5_petit.ino`)です。WiFiなどの設定はSDカードの`config.txt`から読み込みます(`config.example.txt`を参照)。SDカードに入れる顔画像・効果音のテンプレートはリポジトリ直下の`sd.zip`にあります。
-
-セットアップ手順は[HOW_TO_SETUP_M5_CORES3.md](./HOW_TO_SETUP_M5_CORES3.md)を参照してください。書き込みは[M5 Petit Web Flasher](https://petitones.github.io/m5-petit-scripts/)(ブラウザから・推奨)またはArduino IDEの2通りです。
-
-🎬 Web Flasherでインストールする様子はこちら → [インストール動画](./videos/install_via_webpage.mp4)
-
-### `web/` — Web Flasherページ
-
-上記Web Flasher([petitones.github.io/m5-petit-scripts](https://petitones.github.io/m5-petit-scripts/))のソースです。CIでビルドしたファームウェアを[ESP Web Tools](https://esphome.github.io/esp-web-tools/)経由でブラウザから書き込みます。
 
 ### `mailbox/` — メールボックス
 
